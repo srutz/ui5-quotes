@@ -1,0 +1,13 @@
+.authorcell {
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    padding: 8px 0px;
+}
+
+.quotecell {
+    min-width: 440px;
+    width: 400px;
+    padding: 8px 0px;
+}

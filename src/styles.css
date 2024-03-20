@@ -1,36 +1,13 @@
-/*
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*/
-
-.flex {
-    display: flex;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.h-1 {
-    height: 1px;
-}
-
-.grow {
-    flex-grow: 1;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.overflow-auto-y {
-    overflow-y: auto;
-}
 
 
 body {
     height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 

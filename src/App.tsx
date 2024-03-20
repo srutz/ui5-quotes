@@ -9,7 +9,7 @@ import { QuotesView } from './QuotesView.tsx';
 function App() {
   return (
     <div className="flex flex-col h-1 grow">
-        <div className="flex flex-col items-center grow">
+        <div className="flex flex-col items-stretch grow">
             <QuotesView></QuotesView>
             {false && (
                 <>
@@ -17,7 +17,7 @@ function App() {
                     <Button type="Submit">Click me</Button>
                 </>
             )}
-        </div>        
+        </div>
     </div>
   )
 }

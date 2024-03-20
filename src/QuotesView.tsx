@@ -3,6 +3,7 @@
 import { Icon, Input, InputDomRef, Label, Table, TableCell, TableColumn, TableRow, Title } from "@ui5/webcomponents-react";
 import { Ui5CustomEvent } from "@ui5/webcomponents-react/wrappers";
 import { useEffect, useState } from "react";
+import './QuotesView.css'
 
 type Quote = {
     id: number;
@@ -69,29 +70,25 @@ export function QuotesView() {
                 type="Text"
                 valueState="None"
                 />
-            <div className="flex flex-col h-1 grow overflow-auto-y">
-            <Table
-                columns={cols}
-                onLoadMore={function _a() { }}
-                onPopinChange={function _a() { }}
-                onRowClick={function _a() { }}
-                onSelectionChange={function _a() { }}
-            >
-                {filteredQuores.map(q => (
-                    <TableRow key={q.id}>
-                        <TableCell>
-                            <div style={{ minWidth: "440px", width: "400px", padding: "8px 0px" }}>
-                                {q.quote}
-                            </div>
-                        </TableCell>
-                        <TableCell>
-                            <div style={{ boxSizing: "border-box", display: "flex", height: "100%", alignItems: "flex-start", padding: "8px 0px" }}>
-                                {q.author}
-                            </div>
-                        </TableCell>
-                    </TableRow>
-                ))}
-            </Table>
+            <div className="flex flex-col h-1 grow overflow-y-auto self-stretch pl-8 pr-8">
+                <Table
+                    columns={cols}
+                    onLoadMore={function _a() { }}
+                    onPopinChange={function _a() { }}
+                    onRowClick={function _a() { }}
+                    onSelectionChange={function _a() { }}
+                >
+                    {filteredQuores.map(q => (
+                        <TableRow key={q.id}>
+                            <TableCell>
+                                <div className="quotecell">{q.quote}</div>
+                            </TableCell>
+                            <TableCell>
+                                <div className="authorcell">{q.author}</div>
+                            </TableCell>
+                        </TableRow>
+                    ))}
+                </Table>
             </div>
         </div>
     )
